@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.dingyonghui.newtitledingyonghui.MainActivity"
+    android:id="@+id/lin_home">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:background="#FF3333"
+            android:layout_height="50dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/widget_title"
+                    />
+                <LinearLayout
+                    android:id="@+id/rl"
+                    android:layout_gravity="center"
+                    android:layout_width="fill_parent"
+                     android:layout_height="50dp"
+                    android:background="@drawable/abc_popup"
+                    >
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/detail_search_icon"
+                        />
+                    <TextView
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="搜你想搜的"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="30dp"-->
+
+            <!--&gt;-->
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tablayout_title"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                app:tabSelectedTextColor="@android:color/holo_red_dark"
+                app:tabIndicatorColor="@null"></android.support.design.widget.TabLayout>
+            <!--<android.support.v4.view.ViewPager-->
+                <!--android:id="@+id/viewpager"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1">-->
+
+            <!--</android.support.v4.view.ViewPager>-->
+
+            />
+
+            <!--<ImageView-->
+                <!--android:id="@+id/imager"-->
+
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="fill_parent"-->
+                <!--android:background="#FFFFFF"-->
+                <!--android:src= "@drawable/add_channel_titlbar_follow_normal"></ImageView>-->
+
+
+
+
+
+        <!--</RelativeLayout>-->
+
+
+        <android.support.v4.view.ViewPager
+
+            android:layout_weight="1"
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+
+    </LinearLayout>
+</LinearLayout>
