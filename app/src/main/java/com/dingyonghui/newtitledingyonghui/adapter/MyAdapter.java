@@ -7,18 +7,17 @@ import android.support.v4.app.FragmentPagerAdapter;
 import java.util.List;
 
 /**
- * Created by lx on 2017/2/12.
+ * Created by lx on 2017/2/17.
  */
 
-public class MyAdapter extends FragmentPagerAdapter{
+public class MyAdapter extends FragmentPagerAdapter {
 
-
-    private String [] title;
+    private String[] title;
     private List<Fragment> list;
 
-    public MyAdapter(FragmentManager fm ,  String []title) {
+    public MyAdapter(FragmentManager fm, String[] title) {
         super(fm);
-        this.title=title;
+        this.title = title;
     }
 
     public void setList(List<Fragment> list){
@@ -26,9 +25,10 @@ public class MyAdapter extends FragmentPagerAdapter{
     }
 
     @Override
-    public CharSequence getPageTitle(int position) {
-        return title[position];
+    public int getCount() {
+        return list.size();
     }
+
 
     @Override
     public Fragment getItem(int position) {
@@ -36,7 +36,7 @@ public class MyAdapter extends FragmentPagerAdapter{
     }
 
     @Override
-    public int getCount() {
-        return list.size();
+    public CharSequence getPageTitle(int position) {
+        return title[position];
     }
 }

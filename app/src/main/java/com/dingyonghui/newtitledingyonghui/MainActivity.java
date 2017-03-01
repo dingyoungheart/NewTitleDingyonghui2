@@ -3,10 +3,15 @@ package com.dingyonghui.newtitledingyonghui;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
+
+import com.dingyonghui.newtitledingyonghui.fragment.Fragment_Care;
+import com.dingyonghui.newtitledingyonghui.fragment.Fragment_Home;
+import com.dingyonghui.newtitledingyonghui.fragment.Fragment_NoLogin;
+import com.dingyonghui.newtitledingyonghui.fragment.Fragment_Vedio;
+import com.umeng.message.PushAgent;
 
 public class MainActivity extends FragmentActivity implements View.OnClickListener {
 
@@ -16,6 +21,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private RadioButton rd_nologin;
 
 
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +36,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
 
         initView();
+        PushAgent.getInstance(this).onAppStart();
 
     }
 
@@ -40,6 +47,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
         rd_home.setOnClickListener(this);
         rd_home.setTextColor(Color.RED);
+        rd_home.setSelected(true);
         rd_vedio.setOnClickListener(this);
         rd_care.setOnClickListener(this);
         rd_nologin.setOnClickListener(this);
@@ -58,7 +66,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 rd_vedio.setTextColor(Color.BLACK);
                 rd_care.setTextColor(Color.BLACK);
                 rd_nologin.setTextColor(Color.BLACK);
-
+                rd_home.setSelected(true);
                 Fragment_Home home = new Fragment_Home();
                 getSupportFragmentManager().beginTransaction().replace(R.id.fl, home).commit();
                 break;

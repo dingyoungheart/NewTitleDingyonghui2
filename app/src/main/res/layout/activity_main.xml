@@ -6,13 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.dingyonghui.newtitledingyonghui.MainActivity">
 
-    <!--<android.support.v4.view.ViewPager-->
-        <!--android:layout_width="fill_parent"-->
-        <!--android:layout_height="fill_parent"-->
-        <!--android:id="@+id/vp"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_alignParentStart="true" />-->
 
     <RadioGroup
         android:layout_alignParentBottom="true"
@@ -28,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@mipmap/b_newhome_tabbar"
+            android:drawableTop="@drawable/home_iv_select"
             android:gravity="center"
             android:text="首页"/>
         <RadioButton
@@ -37,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@mipmap/b_newvideo_tabbar"
+            android:drawableTop="@drawable/void_iv_select"
             android:gravity="center"
             android:text="视频"/>
         <RadioButton
@@ -46,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@mipmap/b_newcare_tabbar"
+            android:drawableTop="@drawable/care_iv_select"
             android:gravity="center"
             android:text="关注"/>
         <RadioButton
@@ -55,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:button="@null"
-            android:drawableTop="@mipmap/b_newnologin_tabbar"
+            android:drawableTop="@drawable/login_iv_select"
             android:gravity="center"
             android:text="未登录"/>
 
